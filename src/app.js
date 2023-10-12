@@ -11,36 +11,35 @@ window.onload = function() {
   let adj = ["great", "big", "awesome", "happy"];
   let noun = ["jogger", "racoon", "mouse", "cow"];
   let domain = [".com", ".net", ".org"];
-  let createddomain = [];
 
-  let pronounRandom = pronoun[Math.floor(Math.random() * pronoun.length)];
-  console.log(pronounRandom);
+  let pronounRandomIndex, adjRandomIndex, nounRandomIndex, domainRandomIndex;
 
-  let adjRandom = adj[Math.floor(Math.random() * adj.length)];
-  console.log(adjRandom);
+  for (let i = 0; i < 1; i++) {
+    pronounRandomIndex = Math.floor(Math.random() * pronoun.length);
+    adjRandomIndex = Math.floor(Math.random() * adj.length);
+    nounRandomIndex = Math.floor(Math.random() * noun.length);
+    domainRandomIndex = Math.floor(Math.random() * domain.length);
+  }
 
-  let nounRandom = noun[Math.floor(Math.random() * noun.length)];
-  console.log(nounRandom);
+  let domainName =
+    pronoun[pronounRandomIndex] +
+    adj[adjRandomIndex] +
+    noun[nounRandomIndex] +
+    domain[domainRandomIndex];
 
-  let domainRandom = domain[Math.floor(Math.random() * domain.length)];
-  console.log(domainRandom);
-
-  createddomain.push(pronounRandom + adjRandom + nounRandom + domainRandom);
-  console.log(createddomain);
-
-  let myString = createddomain.join();
-  console.log(myString);
-
-  // for (let i = 0; i < pronoun.length; i++) {
-  //   let pronounRandom = Math.floor(Math.random() * pronoun.length - 1);
-  //   console.log(pronoun[pronounRandom]);
-  // }
-  // for (let i = 0; i < adj.length; i++) {
-  //   let adjRandom = Math.floor(Math.random() * adj.length - 1);
-  //   console.log(adj[adjRandom]);
-  // }
-  // for (let i = 0; i < noun.length; i++) {
-  //   let nounRandom = Math.floor(Math.random() * pronoun.length - 1);
-  //   console.log(noun[nounRandom]);
-  // }
+  console.log(domainName);
 };
+
+// Test project resolution with a different approach!
+
+// let pronounRandom = pronoun[Math.floor(Math.random() * pronoun.length)];
+
+// let adjRandom = adj[Math.floor(Math.random() * adj.length)];
+
+// let nounRandom = noun[Math.floor(Math.random() * noun.length)];
+
+// let domainRandom = domain[Math.floor(Math.random() * domain.length)];
+
+// createddomain.push(pronounRandom + adjRandom + nounRandom + domainRandom);
+
+// let myString = createddomain.join('');
