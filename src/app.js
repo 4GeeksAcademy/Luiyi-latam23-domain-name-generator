@@ -8,9 +8,10 @@ import "./assets/img/4geeks.ico";
 window.onload = function() {
   //write your code here
   let pronoun = ["the", "our"];
-  let adj = ["great", "big"];
-  let noun = ["jogger", "racoon"];
-  let domain = [];
+  let adj = ["great", "big", "awesome", "happy"];
+  let noun = ["jogger", "racoon", "mouse", "cow"];
+  let domain = [".com", ".net", ".org"];
+  let createddomain = [];
 
   let pronounRandom = pronoun[Math.floor(Math.random() * pronoun.length)];
   console.log(pronounRandom);
@@ -20,6 +21,15 @@ window.onload = function() {
 
   let nounRandom = noun[Math.floor(Math.random() * noun.length)];
   console.log(nounRandom);
+
+  let domainRandom = domain[Math.floor(Math.random() * domain.length)];
+  console.log(domainRandom);
+
+  createddomain.push(pronounRandom + adjRandom + nounRandom + domainRandom);
+  console.log(createddomain);
+
+  let myString = createddomain.join();
+  console.log(myString);
 
   // for (let i = 0; i < pronoun.length; i++) {
   //   let pronounRandom = Math.floor(Math.random() * pronoun.length - 1);
