@@ -12,22 +12,20 @@ window.onload = function() {
   let noun = ["jogger", "racoon", "mouse", "cow"];
   let domain = [".com", ".net", ".org"];
 
-  let pronounRandomIndex, adjRandomIndex, nounRandomIndex, domainRandomIndex;
+  let domainList = [];
 
-  for (let i = 0; i < 1; i++) {
-    pronounRandomIndex = Math.floor(Math.random() * pronoun.length);
-    adjRandomIndex = Math.floor(Math.random() * adj.length);
-    nounRandomIndex = Math.floor(Math.random() * noun.length);
-    domainRandomIndex = Math.floor(Math.random() * domain.length);
+  for (let i = 0; i < pronoun.length; i++) {
+    for (let j = 0; j < adj.length; j++) {
+      for (let k = 0; k < noun.length; k++) {
+        for (let l = 0; l < domain.length; l++) {
+          let domainName = pronoun[i] + adj[j] + noun[k] + domain[l];
+          domainList.push(domainName);
+        }
+      }
+    }
   }
 
-  let domainName =
-    pronoun[pronounRandomIndex] +
-    adj[adjRandomIndex] +
-    noun[nounRandomIndex] +
-    domain[domainRandomIndex];
-
-  console.log(domainName);
+  console.log(domainList);
 };
 
 // Test project resolution with a different approach!
