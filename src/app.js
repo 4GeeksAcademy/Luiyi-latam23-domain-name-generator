@@ -7,18 +7,18 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
-  let pronoun = ["the", "our"];
-  let adj = ["great", "big", "awesome", "happy"];
-  let noun = ["jogger", "racoon", "mouse", "cow"];
-  let domain = [".com", ".net", ".org"];
+  let pronouns = ["the", "our"];
+  let adjectives = ["great", "big", "awesome", "happy"];
+  let nouns = ["jogger", "racoon", "mouse", "cow"];
+  let domains = [".com", ".net", ".org"];
 
   let domainList = [];
 
-  for (let i = 0; i < pronoun.length; i++) {
-    for (let j = 0; j < adj.length; j++) {
-      for (let k = 0; k < noun.length; k++) {
-        for (let l = 0; l < domain.length; l++) {
-          let domainName = pronoun[i] + adj[j] + noun[k] + domain[l];
+  for (let pronoun of pronouns) {
+    for (let adjective of adjectives) {
+      for (let noun of nouns) {
+        for (let domain of domains) {
+          let domainName = pronoun + adjective + noun + domain;
           domainList.push(domainName);
         }
       }
